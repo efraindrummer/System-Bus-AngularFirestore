@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "transportes-e554b": {
+      "hosting": {
+        "autobuses": [
+          "transportes-e554b"
+        ]
+      }
+    }
+  }
+}

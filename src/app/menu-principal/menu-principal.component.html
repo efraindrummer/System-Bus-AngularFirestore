@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/archive/1/10/20120721221304%21Icono-autob%C3%BAs-rojo.svg/120px-Icono-autob%C3%BAs-rojo.svg.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> SISTEMA
+        DE AUTOBUSES
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse " data-target="#navbarNavDropdown " aria-controls="navbarNavDropdown " aria-expanded="false " aria-label="Toggle navigation ">
+    <span class="navbar-toggler-icon "></span>
+  </button>
+    <div class="collapse navbar-collapse " id="navbarNavDropdown ">
+        <ul class="navbar-nav ">
+
+            <!------------------------------------------------------------------------------------------>
+            <li class="nav-item active">
+                <a class="nav-link" routerLink="/principal">Principal</a>
+            </li>
+            <!-- -------------------------------------------separador de dropmenus de alta de autobus -->
+            <li class="nav-item dropdown" dropdown>
+                <a class="nav-link dropdown-toggle active" dropdownToggle id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cliente
+                </a>
+                <div class="dropdown-menu" *dropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" routerLink="/agregar-cliente">Agregar Clientes</a>
+                    <a class="dropdown-item" routerLink="/listado-clientes">Ver Clientes</a>
+                </div>
+            </li>
+            <!-----------------------------------------separador chofer ------------------------->
+            <li class="nav-item dropdown" dropdown>
+                <a class="nav-link dropdown-toggle active" dropdownToggle id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Chofer
+                </a>
+                <div class="dropdown-menu" *dropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" routerLink="/agregar-choferes">Agregar Chofer</a>
+                    <a class="dropdown-item" routerLink="/listado-choferes">Ver Choferes</a>
+                </div>
+            </li>
+            <!-----------------------------------------separador de lugar------------------------>
+            <li class="nav-item dropdown" dropdown>
+                <a class="nav-link dropdown-toggle active" dropdownToggle href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Lugar
+                </a>
+                <div class="dropdown-menu" *dropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <!-----------------------------------------separador de viajes------------------------>
+            <li class="nav-item dropdown" dropdown>
+                <a class="nav-link dropdown-toggle active" dropdownToggle href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Viajes
+                </a>
+                <div class="dropdown-menu" *dropdownMenu aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <button (click)="logout()" type="button" class="btn btn-outline-danger">Salir del sistema</button>
+</nav>

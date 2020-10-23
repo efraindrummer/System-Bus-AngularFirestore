@@ -1,0 +1,18 @@
+<div class="container mt-5">
+
+    <h4 class="text-center">Listado de Choferes</h4>
+
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let chofer of choferes">
+            <div class="card">
+                <img class="card-img-top imgCliente" [src]="chofer.imgChofer" alt="...">
+                <div class="card-body">
+                    <p>{{chofer.id}}</p>
+                    <h5 class="card-title">{{chofer.nombre}} {{chofer.apellido}}</h5>
+                    <a href="#" class="card-link text-danger">Desactivar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

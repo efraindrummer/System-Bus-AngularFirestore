@@ -1,0 +1,55 @@
+<div class="container">
+
+    <br>
+    <h2 align="center">SISTEMA DE TRANSPORTE</h2>
+    <h4 align="center">Bienvenido, Ingrese al sistema!!</h4>
+    <br>
+    <br>
+    <div class="card mb-3" style="max-width: 740px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="https://image.freepik.com/vector-gratis/plantilla-logotipo-autobus_59362-84.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <form [formGroup]="formularioLogin">
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="email" class="form-control" formControlName="email" id="email" placeholder="ingrese su correo">
+                            <div *ngIf="formularioLogin.controls['email'].invalid && formularioLogin.controls['email'].dirty" class="alert alert-danger" role="alert">
+                                <span *ngIf="formularioLogin.controls['email'].errors.required">El correo es requerido</span>
+                                <span *ngIf="formularioLogin.controls['email'].errors.email">Correo no es valido</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" (keyup.enter)="ingresarSistema()" formControlName="password" id="password" placeholder="ingrese su contraseña">
+                            <div *ngIf="formularioLogin.controls['password'].invalid && formularioLogin.controls['password'].dirty" class="alert alert-danger" role="alert">
+                                <span *ngIf="formularioLogin.controls['password'].errors.required">La contraseña es requerida</span>
+                            </div>
+                        </div>
+                        <button type="submit" [disabled]="!formularioLogin.valid" (click)="ingresarSistema()" class="btn btn-primary">Ingresar al sistema</button>
+                    </form>
+
+                    <div *ngIf="!datosCorrectos " class="alert alert-warning " role="alert ">
+                        {{textoError}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ngx-spinner bdColor="rgba(19,23,195,0.8)" size="medium" color="#f0f0f0" type="ball-spin" [fullScreen]="true">
+        <p style="color: white"> Ingresando al sistema... </p>
+    </ngx-spinner>
+</div>
+
+<footer>
+
+    <br><br>
+    <div class="footer-bottom text-center pb-5">
+        <small class="copyright">Sistema Diseñado y Creado <i class="fas fa-heart" style="color: #fb866a;"></i> por <a href="https://academiaefraindrummer.000webhostapp.com/" target="_blank">
+        @efraindrummer
+        </a> Desarrollador Full Stack Web</small>
+    </div>
+</footer>
